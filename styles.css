@@ -1,4 +1,5 @@
         body {
+            margin: 0;
             background-color: #f5f5f5;
             font-family: "Microsoft YaHei", sans-serif;
             color: #333;
@@ -81,4 +82,57 @@
             /* 鼠标悬停时改变背景色 */
             background-color: #ffe8d6;
 
+        }
+        main {
+            max-width: 900px;
+            /* 上下0 左右自动 = 水平居中 */
+            margin:0 auto; 
+            /* 上下40 左右20,让内容呼吸 */
+            padding: 40px 20px;
+        }
+        /* section 之间留间距 */
+        main section {
+            margin-bottom: 40px;
+        }
+        .hero {
+            /* 至少占屏幕高度的60% */
+            min-height:60vh;
+            display:flex;
+            /* 关键:让子元素竖排(默认是横排) */
+            flex-direction:column;
+            /* 主轴(竖轴) 居中 */
+            justify-content:center;
+            /* 交叉轴(横轴) 居中 */
+            align-items:center;
+            background:linear-gradient(135deg,#2c3e50,#4a6fa5);
+            color:#fff;
+            text-align:center;
+        }
+        .hero h1 {
+            font-size:3rem;
+            margin:0 0 16px 0;
+            /* 覆盖全局h1的深色 */
+            color:#fff;
+        }
+        .tagline {
+            font-size:1.2rem;
+            /* 上右下左 */
+            margin:0 0 32px 0;
+            opacity:0.9;
+        }
+        .cta{
+            background:#fff;
+            color:#2c3e50;
+            padding:12px 24px;
+            border-radius:24px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+        .cta:hover{
+            /* 悬停变橙,呼应卡片那个hover */
+            background:#ffe8d6;
+        }
+        html {
+            /* 这一行让点击链接时滚动更平滑 */
+            scroll-behavior:smooth;
         }

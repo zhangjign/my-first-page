@@ -4,55 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <title>我的第一个网页</title>
-
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!--页头：网站的顶部区域 -->
-    <header>
-        <h1>你好，我是 zhang</h1>
-    </header>
 
     <!-- 导航：放跳转链接 -->
     <nav class="navbar">
         <span class="brand">zhang 的学习站</span>
         <ul class="nav-links">
             <li><a href="#">首页</a></li>
-            <li><a href="#">关于</a></li>
+            <li><a href="#about">关于</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#contact">联系</a></li>
             <li><a href="https://developer.mozilla.org" target="_blank">MDN</a></li>
         </ul>
     </nav>
 
+    <!--Hero 区:页面顶部那块大标题 -->
+    <section class="hero">
+        <h1>你好, 我是 zhang 👋</h1>
+        <p class="tagline">正在学习全栈开发的初学者</p>
+        <a href="#about" class="cta">看看我的作品</a>
+    </section>
+
+
     <!-- 主要内容：一个页面只有一个main -->
     <main>
-        <p>今天是我学习编程的第一天。</p>
+        <section class="about" id="about">
+            <h2>关于我</h2>
+            <p>今天是我学习编程的第一天。</p>
+            <!-- 图片 src 是相对 index.html 的路径 -->
+            <img src="images/me.png" alt="我的照片" width="200">
+            
+    
+            <!-- 无序列表 -->
+            <ul>
+                <li>会写一个网页</li>
+                <li>会用 Git 提交代码</li>
+            </ul>
 
-        <!-- 图片 src 是相对 index.html 的路径 -->
-        <img src="images/me.png" alt="我的照片" width="200">
+        </section>
 
-        <!-- 无序列表 -->
-        <ul>
-            <li>会写一个网页</li>
-            <li>会用 Git 提交代码</li>
-        </ul>
+        <section class="skills" id="skills">
+            <h2>我的技能</h2>
+            <div class="cards">
+                    <div class="card">HTML</div>
+                    <div class="card">CSS</div>
+                    <div class="card">JavaScript</div>
+                    <div class="card">React</div>
+                    <div class="card">Node.js</div>
+                    <div class="card">PostgreSQL</div>
+            </div>
+        </section>
 
-        <div class="cards">
-            <div class="card">HTML</div>
-            <div class="card">CSS</div>
-            <div class="card">JavaScript</div>
-            <div class="card">React</div>
-            <div class="card">Node.js</div>
-            <div class="card">PostgreSQL</div>
-        </div>
+        <section class="contact" id="contact">
+            <h2>联系我</h2>
+            <form>
+                <!-- 表单 -->
+                    <label for="name">你的名字：</label>
+                    <input id="name" type="text" placeholder="输入名字" />
+                    <button type="submit">提交</button>
+                    <span id="save-status" role="status" aria-live="polite"></span>
+            </form>
+        </section>
 
-        <!-- 表单 -->
-        <form>
-            <label for="name">你的名字：</label>
-            <input id="name" type="text" placeholder="输入名字" />
-            <button type="submit">提交</button>
-            <span id="save-status" role="status" aria-live="polite"></span>
-        </form>
+
+
     </main>
 
     <!-- 页脚：网站的底部区域 -->
