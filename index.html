@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
-        <meta charset="UTF-8">
-        <title>我的第一个网页</title>
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的第一个网页</title>
+</head>
+
+<body>
+    <!--页头：网站的顶部区域 -->
+    <header>
         <h1>你好，我是 zhang</h1>
+    </header>
+
+    <!-- 导航：放跳转链接 -->
+    <nav>
+        <a href="https://developer.mozilla.org" target="_blank">MDN(新窗口打开)</a>
+    </nav>
+
+    <!-- 主要内容：一个页面只有一个main -->
+    <main>
         <p>今天是我学习编程的第一天。</p>
+
+        <!-- 图片 src 是相对 index.html 的路径 -->
+        <img src="images/me.png" alt="我的照片" width="200">
+
+        <!-- 无序列表 -->
         <ul>
             <li>会写一个网页</li>
             <li>会用 Git 提交代码</li>
         </ul>
-        <img src="images/me.png" alt="我的照片" width="200" >
-        <p>
-            <a href="https://developer.mozilla.org" target="_blank">MDN(新窗口打开)</a>
-        </p>
+
+        <!-- 表单 -->
         <form>
             <label for="name">你的名字：</label>
-            <input id="name" type="text" placeholder="输入名字"/>
+            <input id="name" type="text" placeholder="输入名字" />
             <button type="submit">提交</button>
         </form>
+    </main>
 
-    </body>
+    <!-- 页脚：网站的底部区域 -->
+    <footer>
+        <p>© 2026 zhang · 我的第一个网页</p>
+    </footer>
+</body>
 </html>
