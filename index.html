@@ -5,19 +5,7 @@
     <meta charset="UTF-8">
     <title>我的第一个网页</title>
 
-    <style>
-        body {
-            background-color: #f5f5f5;
-            font-family: "Microsoft YaHei", sans-serif;
-            color: #333;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        a {
-            color: #e74c3c;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -27,8 +15,13 @@
     </header>
 
     <!-- 导航：放跳转链接 -->
-    <nav>
-        <a href="https://developer.mozilla.org" target="_blank">MDN(新窗口打开)</a>
+    <nav class="navbar">
+        <span class="brand">zhang 的学习站</span>
+        <ul class="nav-links">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">关于</a></li>
+            <li><a href="https://developer.mozilla.org" target="_blank">MDN</a></li>
+        </ul>
     </nav>
 
     <!-- 主要内容：一个页面只有一个main -->
@@ -44,11 +37,21 @@
             <li>会用 Git 提交代码</li>
         </ul>
 
+        <div class="cards">
+            <div class="card">HTML</div>
+            <div class="card">CSS</div>
+            <div class="card">JavaScript</div>
+            <div class="card">React</div>
+            <div class="card">Node.js</div>
+            <div class="card">PostgreSQL</div>
+        </div>
+
         <!-- 表单 -->
         <form>
             <label for="name">你的名字：</label>
             <input id="name" type="text" placeholder="输入名字" />
             <button type="submit">提交</button>
+            <span id="save-status" role="status" aria-live="polite"></span>
         </form>
     </main>
 
@@ -56,5 +59,6 @@
     <footer>
         <p>© 2026 zhang · 我的第一个网页</p>
     </footer>
+    <script src="autosave.js"></script>
 </body>
 </html>

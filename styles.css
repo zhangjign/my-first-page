@@ -3,9 +3,82 @@
             font-family: "Microsoft YaHei", sans-serif;
             color: #333;
         }
+
         h1 {
             color: #2c3e50;
         }
+
         a {
             color: #e74c3c;
+        }
+
+        .cards {
+            display: flex;
+            /* 使用 flex 布局让里面的子项水平排列 */
+            gap: 16px;
+            /* 设置子项之间的间距 */
+            justify-content: center;
+            /* 水平居中对齐 */
+            align-items: center;
+            /* 垂直居中对齐 */
+            flex-wrap: wrap;
+            /* 当空间不足时，允许换行 */
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 16px 24px;
+            /* 设置内边距 */
+            border-radius: 8px;
+            /* 设置圆角 */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+            /* 设置轻阴影,像卡片 */
+        }
+
+        #save-status {
+            display: block;
+            margin-top: 8px;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .navbar {
+            display: flex;
+            /* 品牌靠左,链接靠右 */
+            justify-content: space-between;
+            /* 垂直居中 */
+            align-items: center;
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 12px 24px;
+        }
+
+        .brand {
+            font-weight: bold;
+        }
+
+        .nav-links {
+            /* 链接们横排 */
+            display: flex;
+            gap: 16px;
+            /* 去掉li的小圆点 */
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            /* 鼠标悬停时添加下划线 */
+            text-decoration: underline;
+        }
+
+        .card:hover {
+            /* 鼠标悬停时改变背景色 */
+            background-color: #ffe8d6;
+
         }
